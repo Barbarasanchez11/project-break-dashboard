@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Añade tu enlace de interés</h1>
-    <input type="text" id="nombre" placeholder="Nombre del enlace">
-    <input type="text" id="enlace" placeholder="Introduce el enlace">
-    <button id="guardar" class="btnguardar">Enviar</button>
+  <div class="inputContainer">
+    <h2>Añade tus enlaces de interés</h2>
+    <input type="text" id="nombre" placeholder="Nombre del enlace" required>
+    <input type="text" id="enlace" placeholder="Introduce el enlace" required>
+    <button id="guardar" class="btnguardar">Añade tu link</button>
+    <div id="itemscontainer" class="itemscontainer">
+        <ul class="ulList"></ul>
+    </div>
+  </div>
+    
     <script src="../JS/links.js"></script>
 </body>
 </html>

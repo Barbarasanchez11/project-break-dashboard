@@ -53,12 +53,25 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
     <p>Humedad: ${current.humidity}</p>
     <p>Viento: ${current.wind_kph}</p>
     <p>Precipitación: ${current.precip_mm}</p>
-    <p>Pronóstico: ${data.forecast.forecastday[0].hour}
+    <ul id ="list"></ul>
   `
-
   const weatherContainer = document.getElementById("weather")
    if(weatherContainer !== null) {
     weatherContainer.appendChild(divWeather)//si existe se añade como hijo//
    
-   }
+   
+  const ul = divWeather.querySelector("#list");
+  const hourForecast = data.forecast.forecastday[0].hour
+  hourForecast.forEach(hour => {
+    const li = document.createElement("li");
+    li.textContent = ` ${hour.temp_c} ${hour.condition.text}`;
+    ul.appendChild(li);
+
+   })
   }
+
+ 
+  }
+
+    
+ 

@@ -9,6 +9,8 @@ const mensaje = document.getElementById("frase")
 
 const months= ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
+
+let frase = ""
 //En cada intervalo se obtiene fecha y hora a través de new date//
 
 const interval = setInterval (() => {
@@ -20,6 +22,7 @@ const interval = setInterval (() => {
         hour12: false
         }
     //extraemos dia,mes y año//
+    let hour = local.getHours()
     let day = local.getDate();
     let month = local.getMonth();
     let year = local.getFullYear();
@@ -53,7 +56,7 @@ function mostrarFrase() {
     }else if (hour => 16 && hour < 18) {
         frase ="Buenas tardes, el último empujón"
     }else if (hour => 18 && hour < 20) {
-        frase ="sto ya son horas extras, ... piensa en parar pronto"
+        frase ="Esto ya son horas extras, ... piensa en parar pronto"
     }else {
         frase = "Buenas noches, es hora de pensar en parar y descansar"
     }
