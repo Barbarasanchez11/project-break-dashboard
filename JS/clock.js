@@ -5,17 +5,17 @@ const date = document.getElementById("date")
 const mensaje = document.getElementById("frase")
 
 
-//const para meses//
-
+//const para meses y días//
+const daysName = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 const months= ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
 
 
 let frase = ""
 //En cada intervalo se obtiene fecha y hora a través de new date//
 
-const interval = setInterval (() => {
+const interval = setInterval (() => {//se ejecuta cada segundo(1000)
     const local = new Date()
-    const options = {
+    const options = {//definimos que queremos 2 dígitos siempre, para que si es - de 10 ponga un 0 delante//
         hour: '2-digit',
         minute: '2-digit',
         second : '2-digit',
@@ -23,26 +23,25 @@ const interval = setInterval (() => {
         }
     //extraemos dia,mes y año//
     let hour = local.getHours()
-    let day = local.getDate();
+    let day = local.getDay();
     let month = local.getMonth();
     let year = local.getFullYear();
 
 
-    let tiempocompleto = local.toLocaleTimeString("en-GB", options)
+    let tiempocompleto = local.toLocaleTimeString("en-GB", options)//metemos el option definido arriba, para que cuando el nº < 10, se ponga un 0 delante//el en-GB muestra las 24h, en lugar de 12H y 12H//
 
  
     //se actualiza el Hmtl con fecha y hora//
     time.innerHTML= tiempocompleto;
-    date.innerHTML = `${day} ${months[month]} ${year}`;
+    date.innerHTML = `${daysName[day-1]} ${months[month]} ${year}`;//day-1, ya que comienza desde 0//
 
-    //ternario para que h,m,s tengan dos dígitos, poner un cero delante cuando sea menor a 10(de momento no fuciona)
+    
 
 
-
-    mostrarFrase()
+    mostrarFrase()//invocamos la función para que nos de la frase según la hora que sea//
 },1000)
 
-function mostrarFrase() {
+function mostrarFrase() {//dará una frase según la hora//
     let frase ="";
 
     if(hour =>  0 &&  hour < 7) {
@@ -57,7 +56,7 @@ function mostrarFrase() {
         frase ="Buenas tardes, el último empujón"
     }else if (hour => 18 && hour < 20) {
         frase ="Esto ya son horas extras, ... piensa en parar pronto"
-    }else {
+    }else {//si no son niguna de las horas de los if o else if, nos dará esta frase//
         frase = "Buenas noches, es hora de pensar en parar y descansar"
     }
 

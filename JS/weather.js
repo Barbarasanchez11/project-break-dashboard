@@ -4,22 +4,7 @@ const weatherContainer = document.getElementById("weather")
 const forecast = document.getElementById("forecast")
 
 
-//async para hacer petición a la api//
-
-//const infoWeather = async () => {
-  //const weatherAwait = fetch await(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no`)//se pasa la apiKey y Madrid
-  //const data = await weatherAwait.json()
- // console.log(data)//devuelve promesa que se guarda en weatherAwait, se convierte en objeto con JSON//
- //try {//errores//
-  // const weatherInfo = data.forecast.forecastday[0].day.condition.text//info de clima actual dentro de data,se guarda en weatherInfo//
-  // console.log(`El tiempo en Madrid es: ${weatherInfo}`)//imprimir clima//
- //} catch (error) {
-  //console.log("Lo sentimos, la información no está disponible")//mensaje no disponible//
-  
- //}
-//}
-
-fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no`)//obtenemmos datos desde la api de Madrid//
+fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no`)//obtenemmos datos(get) desde la api de Madrid//
  .then(response => response.json())//se convierte objeto Json//
  .then (data =>  {//json se guarda en data//
   showInfo(data)//invocamos función//
@@ -33,7 +18,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
         wind = data.current.wind_kph
         precipitation = data.current.precip_mm
         pronostico = data.forecast.forecastday[0].hour
-        // no funciona probado con [0] en hour y sin//
+        
             
  })   
 
@@ -61,11 +46,11 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
    
    
   const ul = divWeather.querySelector("#list");
-  const hourForecast = data.forecast.forecastday[0].hour
-  hourForecast.forEach(hour => {
-    const li = document.createElement("li");
-    li.textContent = ` ${hour.temp_c} ${hour.condition.text}`;
-    ul.appendChild(li);
+  const hourForecast = data.forecast.forecastday[0].hour//
+  hourForecast.forEach(hour => {//se recorre/7
+    const li = document.createElement("li");//se añade cada elemento//
+    li.textContent = ` ${hour.temp_c} ${hour.condition.text}`;//se crea un elemento para cada hora con la tª//
+    ul.appendChild(li);//se añada cada elemento a la ul//
 
    })
   }
