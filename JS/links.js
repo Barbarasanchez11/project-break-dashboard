@@ -51,12 +51,12 @@ function showData () {
 }
 const deleteItem = (e) => {
     
-    const itemSelected = e.target.id//se obtien el id del elemento y se guarda en itemSelected//
+    const itemSelected = e.target.id//se obtiene el id del elemento y se guarda en itemSelected//
     const getLocalData = JSON.parse(localStorage.getItem("links"))//info del localStorage, se parsea y se quedada guardada en la variable
     
     const filterArr = getLocalData.filter(data =>  data.pageUrl !== itemSelected )// se excluye elemento con url y itemSelected que hemos acado arriba
     
-    localStorage.setItem("links",JSON.stringify(filterArr))//nos da el nuevo arr filtrado y convertimos a JSON//
+    localStorage.setItem("links",JSON.stringify(filterArr))//nos da el nuevo arr filtrado y convertimos a JSON,ahora es el localStorage//
     showData()
 }
 btnGuardar.addEventListener ("click", sendDataLocalStorage)
