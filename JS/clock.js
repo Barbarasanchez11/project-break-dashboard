@@ -23,6 +23,7 @@ const interval = setInterval (() => {//se ejecuta cada segundo(1000)
      //extraemos dia,mes y año//
     
     const day = local.getDate();
+    console.log(day)
     const month = local.getMonth();
     const months= ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     const currentMonth = months[month]

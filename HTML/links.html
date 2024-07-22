@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../CSS/links.css">
 </head>
 <body>
-  <div class="inputContainer">
+  <header>
+    <a href="../HTML/index.HTML">
+      <img src="../IMAGE/icons/cohete.png" alt="cohete">
+    <h2>GO HOME</h2>
+    </a>
+  </header>
+  <main>
+  
+   <div class="inputContainer">
+    <div>
     <h2>Añade tus enlaces de interés</h2>
-    <input type="text" id="nombre" placeholder="Nombre del enlace" required>
-    <input type="text" id="enlace" placeholder="Introduce el enlace" required>
-    <button id="guardar" class="btnguardar">Añade tu link</button>
-    <div id="itemscontainer" class="itemscontainer">
+     <img src="../IMAGE/icons/enlace.png" alt="enlace">
+    </div>
+    <div> 
+     <input type="text" id="nombre" placeholder="Nombre de tu enlace" required>
+     <input type="text" id="enlace" placeholder="Pega aquí la URL" required>
+     <button id="guardar" class="btnguardar">Añadir enlace</button>
+    </div>
+     <div id="itemscontainer" class="itemscontainer">
         <ul class="ulList"></ul>
     </div>
-  </div>
+   
+  </main>
+  <footer>
+    <nav class="nav-bar">
+      <a href="../HTML/clock.html"><img src = "../IMAGE/icons/reloj.png" alt="reloj"></a>
+      <a href="../HTML/links.html"><img src = "../IMAGE/icons/enlace.png" alt="link"></a>
+      <a href="../HTML/password.html"><img src = "../IMAGE/icons/candado.png" alt="candado"></a>
+      <a href="../HTML/weather.html"><img src = "../IMAGE/icons/tiempo.png" alt="nube"></a>
+    </nav>
+  </footer>
     
-    <script src="../JS/links.js"></script>
+  <script src="../JS/links.js"></script>
+  <script src="../JS/script.js" ></script>
 </body>
 </html>

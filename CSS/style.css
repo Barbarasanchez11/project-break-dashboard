@@ -44,32 +44,3 @@ table {
 
 /* reloj */
 
-.bodyreloj {
-    display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.containerReloj {
-	text-align: center;
-}
-
-.containerReloj h1 {
-	font-size: 40px;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-/*Reloj*/
-
-.containerReloj {
-
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	padding-top: 30px;
-	padding-left: 10px;
-	padding-right: 10px;
-	row-gap: 20px;
-	background-color: rgb(196, 195, 195);
-	opacity: calc(80%);
-}
