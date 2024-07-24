@@ -31,14 +31,26 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
     divWeather.classList.add("details")//info actual clima Madrid
 
     divWeather.innerHTML = `
-    <h2>${location.name}, ${location.country}</h2>
-    <p>Estado del clima: ${current.condition.text}</p>
-    <img src="${current.condition.icon}" alt= "weather icon">
-    <p>Temperatura: ${current.temp_c}</p>
-    <p>Humedad: ${current.humidity}</p>
-    <p>Viento: ${current.wind_kph}</p>
-    <p>Precipitación: ${current.precip_mm}</p>
-    <ul id ="list"></ul>
+    <div class="details">
+     <h2>${location.name}, ${location.country}</h2>
+     <p> ${current.condition.text}</p>
+    </div>
+    <div class="temperatura">
+     <img src="${current.condition.icon}" alt= "weather icon">
+     <p>${current.temp_c}</p>
+     <div class="termometro">
+      <img src="../IMAGE/icons/celsius.png" alt="termómetro">
+      </div>
+     </div>
+      
+    </div>
+    <div class="precipitacion">
+     <p>Precipitaciones: ${current.precip_mm}</p>
+     <p>Humedad: ${current.humidity}</p>
+     <p>Viento: ${current.wind_kph}</p>
+    </div>
+    <ul id ="list">   
+    </ul>
   `
   const weatherContainer = document.getElementById("weather")
    if(weatherContainer !== null) {
@@ -49,7 +61,8 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
   const hourForecast = data.forecast.forecastday[0].hour//
   hourForecast.forEach(hour => {//se recorre/7
     const li = document.createElement("li");//se añade cada elemento//
-    li.textContent = ` ${hour.temp_c} ${hour.condition.text}`;//se crea un elemento para cada hora con la tª//
+    li.textContent = ` <img src="${hour.condition.icon}"
+    ${hour.temp_c} ${hour.condition.text}ºC`;//se crea un elemento para cada hora con la tª//
     ul.appendChild(li);//se añada cada elemento a la ul//
 
    })
