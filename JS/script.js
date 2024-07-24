@@ -4,11 +4,11 @@ const fotos = ["../IMAGE/foto1.jpg", "../IMAGE/foto2.jpg", "../IMAGE/foto3.jpg",
  ]
 
  const fondo = () => {
-    const aleatorio = Math.floor(Math.random() * 12)
+    const aleatorio = Math.floor(Math.random() * fotos.length)
     const cambio = fotos[aleatorio]
     document.body.style.backgroundImage = `url${cambio}`
  }
 
  let cambioTiempo = setInterval(fondo, 10000)
 
- fondo()
+ 
