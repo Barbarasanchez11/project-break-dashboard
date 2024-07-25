@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="../CSS/links.css">
 </head>
 <body>
-  <header>
+  <header class="headertop">
     <a href="../HTML/index.html"><img src = "../IMAGE/icons/cohete.png" alt="cohete"></a>
     <h2>GO HOME</h2>
     
   </header>
   <main>
-    <div class="linkcontainer">
-    <h2>Añade tus enlaces de interés</h2>
-     <img src="../IMAGE/icons/enlace.png" alt="enlace">
-    </div>
-    <div class="inputContainer"> 
-     <input type="text" id="nombre" placeholder="Añade tu enlace de interés" required>
-     <input type="text" id="enlace" placeholder="Pega aquí la URL" required>
-     <button id="guardar" class="btnguardar">Añadir enlace</button>
-    </div>   
+   <section>
+    <article class="container">
+     <div class="linkcontainer">
+     <h2>Añade tus enlaces de interés</h2>
+      <img src="../IMAGE/icons/enlace.png" alt="enlace">
+     </div>
+     <div class="inputContainer"> 
+      <input type="text" id="nombre" placeholder="Nombre de tu enlace" required>
+      <input type="text" id="enlace" placeholder="Pega aquí la URL" required>
+      <button id="guardar" class="btnguardar">Añadir enlace</button>
+     </div>   
       <ul class="ulList"></ul>
+    </article>  
+   </section>   
   </main>
   <footer>
     <nav class="nav-bar">

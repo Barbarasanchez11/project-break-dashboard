@@ -44,235 +44,206 @@ table {
 
 /* mis css */
 
-/*header*/
+/*main*/
 
-.header {
-    position: fixed;
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: aqua;
 }
 
-.header a {
+.seccion1 {
+    width: 46%;
+    height: 85vh;
+}
+
+.seccion2 {
+    width: 30%;
+}
+
+
+
+
+
+/* links index*/
+.container {
+    width: 100%;
     display: flex;
-    gap: 10px;
-    padding: 10px;
-    color: #000;
-    text-decoration: none;
-    filter: invert(1);
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    
     
 }
 
-.header h2 {
-    font-size: 15px;
-}
-
-.header img {
-    width: 30px;
-}
-
-.main {
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    min-height: 100vh;
-}
-
-
-/* Section*/
-section {
-    width: 50%;
-    height: 50vh;
-}
-
-.listcontainer, .clockweather, .password-container {
-    display: flex;
-}
-
-.listcontainer {
-    display: flex;
-    justify-content: center;
-}
-
-.clockweather, .password-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.containerpassword {
-    display: flex;
-    justify-content: center;
-   
-}
-
-/* links index*/
-
 .linkcontainer {
+    
     display: flex;
-    flex-direction: column;
-    margin-top: 95px;
-    padding: 20px;
-    border-radius: 15px;
-    width: 400px;
-    height: 700px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    color: white;
+    margin-top: 150px;
+    margin-right: 60px;
+
 }
 
 .linkcontainer h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 30px;
+   
+
 }
 
 .linkcontainer img {
     width: 20px;
     height: 20px;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    
-}
+    filter: invert(100%);
 
+}
 .inputContainer {
     display: flex;
-    flex-direction: column; 
-    padding: 0;
-    max-width: 400px;
-    color: #f4f4f4;
-    border-radius: 15px;
-    line-height: 16px;
-
+    justify-content: center;
+    flex-direction: column;
 }
 
 #nombre {
+    display: flex;
     padding: 10px;
     border: none;
     border-radius: 5px;
     justify-content: center;
     width: 380px;
-    height: 20px;
-    background-color: blue;
-    color: #f4f4f4;
-    margin-left: auto;
-    margin-right: auto;
+    height: 16px;
+    padding: 6px;
+    background-color:#f4f4f4;
+    color: #909090;
+    margin-top: 6px;
     
 }
 
 #enlace {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 6px;
     border: none;
     border-radius: 5px;
     justify-content: center;
     width: 380px;
-    height: 20px;
-    background-color: blue;
-    color: #f4f4f4;
-    margin-left: auto;
-    margin-right: auto;
+    height: 16px;
+    background-color: #f4f4f4;
+    color: #909090;
+    margin-top: 12px;
+    
 
 }
 
+
 button {
+    display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     border-radius: 5px;
     margin-top: 10px;
-    width: 400px;
+    width: 390px;
     height: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20px;
+    background-color: #909090;
+    color: white;
+    font-size: 16px;
+    
 }
-
-
 .ulList{
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 440px;
+    width: 360px;
+    height: 200px;
     padding: 20px;
     gap:20px;
     text-decoration: none;
     background-color: blueviolet;
-    margin-left: auto;
-    margin-right: auto;
-   
-
 }
 
 .ulList li {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
-    border-radius: 5px;
-    background-color: rgb(148, 141, 141);
+    justify-content: center;
+    background-color: #909090;
+    opacity: 70%;
     position: relative;
     min-width: 100px;
     height: 50px;
+    border-radius: 5px;
     text-decoration: none;
-    color: white;
-   
     
-    
+     
 }
 
-.ulList li a {
 
+.ulList a {
+    font-size: 20px;
     text-decoration: none;
     color: white;
-    margin-left: auto;
-    margin-right: auto;
     
-
+    
 }
 
 .delete {
-
-    
-    position: relative;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 15px;
     height: 15px;
     color: red;
-    background-color: black;
-    border: none;
     border-radius: 50%;
     font-size: 10px;
     background-color: #3333339;
-   position:absolute;
-   margin: left 85px;
-   
-
+    
 }
+
+/*seccion derecha(reloj,weather,contraseña)*/
+
+
+.clock-weather-password  {
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* reloj index*/
 
- .containerReloj {
- 
-	 text-align: center;
-	 margin:auto;
-	 padding: 20px;
-	 background-color: #33333393;
-	 border-radius: 10px;
-	 width: 400px;
- }
- 
 
- 
- #time {
-	 font-size: 48px;
-	 font-weight: bold;
-	 margin:20px 0;
-	 color: white;
- }
- 
- #date {
-	 font-size: 24px;
-	 color: white;
- }
+ .containerReloj h1 {
+    color:white;
+    font-size: 36px;
+    margin-top: -10px;
+}
+
+#time {
+    font-size: 48px;
+    font-weight: bold;
+    margin:20px 0;
+    color: white;
+}
+
+#date {
+    font-size: 24px;
+    color: white;
+}
+
  
 
 
 
 
 /*weather index*/
-
+/*
 
 main {
     display: flex;
@@ -362,67 +333,100 @@ main {
 
 /*contraseña index*/
 
+.password-container {
 
-.containerpassword {
     display: flex;
-    background-color: blue;
-    color:blue
-    align-items: center;
-    justify-content:center;
-    max-height: 30px;
-}
-
-.containerpassword h2 {
-    font-size: 20px;
-}
-
-.containerpassword img {
-    width: 25px;
-    height: 25px;
-    margin: 20px
-
-}
-.controles {
-
-    width: 350px;
-    height: 115px;
-    align-items: center;
     flex-direction: column;
-    gap: 5px;
+}
+
+.containerpassword{
+    margin: 0 auto;
+    background-color: brown;
     padding: 20px;
-    color: #f4f4f4;
-    background-color: #33333393;
-    border-radius: 15px;
+    
 }
-
-.caracteres {
+.divTitle {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    
+}
+.divTitle h2 {
+    color: white;
+    
+    
+}
+.divTitle img{
+    width: 30px;
+    filter: invert(100%);
 }
 
+.controles {
+    background-color: #33333393; 
+    padding: 20px;   
+    color: white;
+    border-radius: 15px;
+
+}
+
+.labelCaracteres{
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.caracteres{
+    border-radius: 6px;
+    padding:  4px 8px;
+    border: none;
+    font-size: 18px;
+}
+
+#botoncontraseña {
+    background-color: #0671d8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    height: 30px;
+    margin-top: 16px;
+    cursor: pointer;
+
+}
+#contraseñanueva {
+    display: flex;
+    color: #ffe5c1;
+    font-size: 20px;
+    margin-top: 16px;
+}
 
 /* Footer */
 
-footer{
-    background-color: aqua;
-}
-.nav-bar a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
-
-.nav-bar img {
-    width: 30px;
-    transition: transform 0.2s;
-    filter: invert(100%);
-    background:none;
-}
-
-.nav-bar a:hover img {
-    gap:10px;
-    transform: scale(1.2);
-    text-decoration: underline;
-}
-
+    
+ .footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 15px;
+        width: 50%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 30px;
+        filter: invert(100%);
+        border-bottom: 1px solid black;
+    
+    }
+    .footer img{
+        width: 30px;
+        height: 30px
+        
+    }

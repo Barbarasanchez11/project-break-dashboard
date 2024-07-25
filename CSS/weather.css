@@ -46,41 +46,48 @@ table {
 
 
 /*mis css*/
-header {
+
+
+
+body {
+    box-sizing: border-box;
+    background-color: blue;
     
-    top: 0;
-    width: 100%;
-    display: flex;
+}
+/* header */
+.headertop{
+    display: flex;  
     background-color: aqua;
-}
-
-header a {
-    display: flex;
-
-    gap: 10px;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-    filter: invert(1);
+    height: 50px;
     align-items: center;
-    
-}
-
-header img {
-    width: 45px;
-    height: 45px;
-}
-
-header h2 {
-    font-size: 15px;
     color: white;
 }
 
-main {
+
+
+.headertop a {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    
+}
+.headertop a h2 {
+    font-size: 16px;
+}
+ 
+.headertop img {
+    width: 26px;
+    height: 26px;
+    filter: invert(1);
+}
+
+/* main */
+main {
+    height: calc(100vh - 50px);
+    display: flex;
     flex-direction: column;
-    background-color: aqua;
+    justify-content: center;
    
 }
 
@@ -99,21 +106,27 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-
-.details {
+/*.details {
     display: flex;
     text-align: center;
     align-items: flex-start;
+    flex-direction: column;
     color: red;
     margin-left: auto;
     margin-right: auto;
 
+}*/
+
+.details h2 {
+    display: flex;
+    justify-content: center;
 }
+
+
 
 .details p {
     color: #ffe5c1
 }
-
 .temperatura {
     display: flex;
     justify-content: center;
@@ -122,11 +135,6 @@ main {
     gap:20px;
     width:100%;
     margin-top:20px;
-}
-
-.temperatura img {
-    width: 85px;
-    height: 85px;
 }
 
 .temperatura p {
@@ -157,7 +165,7 @@ main {
 
 }
 
-#list {
+/*#list {
 
     display: flex;
     flex-direction: row;
@@ -165,20 +173,28 @@ main {
 
 
 
-.nav-bar{
+
+/* footer */
+
+
+footer {
+    
     display: flex;
     justify-content: flex-end;
-    margin: 20px;
+
 }
 
-#list {
+.nav-bar{
+    width: 50%;
     display: flex;
+    justify-content: flex-end;
+    
+    margin: 20px;
+    border-bottom: 1px solid white;
 }
 
-footer{
-    background-color: aqua;
-}
 .nav-bar a {
+    justify-content: flex-end;
     margin: 0 15px;
     text-decoration: none;
     color: white;
@@ -186,14 +202,15 @@ footer{
 }
 
 .nav-bar img {
+    justify-content: flex-end;
     width: 30px;
     transition: transform 0.2s;
     filter: invert(100%);
     background:none;
+    
 }
 
 .nav-bar a:hover img {
-    gap:10px
     transform: scale(1.2);
-    text-decoration: underline;
+    
 }

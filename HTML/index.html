@@ -8,34 +8,41 @@
 </head>
 <body id="index">
  <header>
-  
- </header>
+   </header>
   <main>
-    <section class="listcontainer">
-     <div class="linkcontainer">
-      <h2>Añade tus enlaces de interés</h2>
-      <img src="../IMAGE/icons/enlace.png" alt="enlace">
-     </div>
-     <div class="inputContainer"> 
-      <input type="text" id="nombre" placeholder="Añade tu enlace de interés" required>
-      <input type="text" id="enlace" placeholder="Pega aquí la URL" required>
-      <button id="guardar" class="btnguardar">Añadir enlace</button>
-     </div>   
+    <section class="seccion1">
+     <artcile class="enlaces">
+      <div class="linkcontainer">
+       <h2>Añade tus enlaces de interés</h2>
+       <img src="../IMAGE/icons/enlace.png" alt="enlace">
+      </div>
+      <div class="inputContainer"> 
+       <input type="text" id="nombre" placeholder="Añade tu enlace de interés" required>
+       <input type="text" id="enlace" placeholder="Pega aquí la URL" required>
+       <button id="guardar" class="btnguardar">Añadir enlace</button>
+      </div>   
       <ul class="ulList"></ul>
-  
-     </section>
+     </artcile>
+    </section>
     
   
-    <section class="clock-weather">
+    <section class="seccion2">
+     <article class="reloj">
+      <div class="clockindex"></div>
        <div id="time">00:00:00</div>
        <div id="date">date</div>
-       
+      </div>
+     </article>  
+
+     <article class="tiempo">
        <div class="weather">
         <div class="weathercontainer" id="weathercontainer"> </div>
         <div class="forecastWeather" id="forecast"></div>
       </div>
-     </section>
-     <section>
+     </article>
+   
+
+     <article class="contraseña">
       <div class="password-container">
         <div>
          <h2>Crea tu contraseña segura</h2>
@@ -49,15 +56,16 @@
          <div id="contraseñanueva">           
          </div>
       </div>
-     </section>
+     </article>
+    </section>
     </div>
     <footer>
-      <nav class="nav-bar">
+      <div class="footer">
         <a href="../HTML/clock.html"><img src = "../IMAGE/icons/reloj.png" alt="reloj" width="40px" height="40px"></a>
         <a href="../HTML/links.html"><img src = "../IMAGE/icons/enlace.png" alt="link" width="40px" height="40px"></a>
         <a href="../HTML/password.html"><img src = "../IMAGE/icons/candado.png" alt="candado" width="40px" height="40px"></a>
         <a href="../HTML/weather.html"><img src = "../IMAGE/icons/tiempo.png" alt="nube" width="40px" height="40px"></a>
-      </nav>
+      </div>
     </footer>
   </main> 
   <script src="../JS/script.js"></script>

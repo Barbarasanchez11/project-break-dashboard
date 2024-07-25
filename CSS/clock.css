@@ -44,35 +44,71 @@ table {
 
 /*mis css*/
 
-header {
-   background-color: aqua;
-   display: flex;
-}
 
-header img {
-    width: 32px;
+
+body {
+    box-sizing: border-box;
+    background-color: blue;
+    
+}
+/* header */
+.headertop{
+    display: flex;  
+    background-color: aqua;
+    height: 50px;
+    align-items: center;
     color: white;
-    display: flex;
-    text-decoration: none;
-    filter:invert(100%)
 }
 
-header h2 {
-    margin: 5px 0 0;
-    text-align: center;
-    font-size: 12px;
-    color:white;
+
+
+.headertop a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: white;
+    
+}
+.headertop a h2 {
+    font-size: 16px;
+}
+ 
+.headertop img {
+    width: 26px;
+    height: 26px;
+    filter: invert(1);
+}
+
+/* main */
+main {
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.clockcontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .containerReloj {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
-    margin:auto;
+    margin-top: 200px;
     padding: 20px;
     background-color: #33333393;
     border-radius: 10px;
     width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .containerReloj h1 {
@@ -99,20 +135,27 @@ header h2 {
 
 }
 
+/* footer */
+
+
 footer {
-    margin-bottom: 20px;
-    background-color: blue;
-    border-bottom: 2px solid white;
+    
+    display: flex;
+    justify-content: flex-end;
 
 }
 
 .nav-bar{
+    width: 50%;
     display: flex;
     justify-content: flex-end;
+    
     margin: 20px;
+    border-bottom: 1px solid white;
 }
 
 .nav-bar a {
+    justify-content: flex-end;
     margin: 0 15px;
     text-decoration: none;
     color: white;
@@ -120,13 +163,15 @@ footer {
 }
 
 .nav-bar img {
+    justify-content: flex-end;
     width: 30px;
     transition: transform 0.2s;
     filter: invert(100%);
     background:none;
+    
 }
 
 .nav-bar a:hover img {
     transform: scale(1.2);
-    text-decoration: underline;
+    
 }
