@@ -20,6 +20,8 @@ function passwordLength(longitud = 12 ) {//si pones nº < 12 no te da contraseñ
     
 } 
 
+
+
 //paso 2
 function crearContraseña (longitud){
 
@@ -51,7 +53,7 @@ return contraseña.join("");//retornamos y con join quitamos las comas
 //Boton generar contraseña//
 
 botoncontraseña.addEventListener("click", () => {
-   let newpasslength = longitudcontraseña.value //obtenemos el valor del input//
+   let newpasslength = caracteres.value //obtenemos el valor del input//
    passwordLength(newpasslength) // llamamos la la funcion passwordLength y le pasamos como argument el valor del input//
     
 })
