@@ -28,17 +28,21 @@ function showData () {
    
     if (getLocalData) {//si getLocalData no es null, borra los elementos de html//
         lista.innerHTML = ""//saca los elem. del getLocalData//
+        let element = ""
         getLocalData.forEach(item => {// se extraen el name y url y se crea un elemento html con el enlace a la url y al name, se ñaade botón de cerar(X)
             const {pageName,pageUrl} = item
-            const element = `<a href="${pageUrl}"> 
-                                <li>${pageName}</li>
-                                
+
+         element += ` <li>${pageName}
+         <a href="${pageUrl}"> 
                             </a>
                             <div id="${pageUrl}" class='delete'>X</div>
+                            </li>
                             `
             
-            lista.innerHTML += element//lo del forEach se concatena a la lista para saque los elementos en pantalla//
+            //lo del forEach se concatena a la lista para saque los elementos en pantalla//
         });
+
+        lista.innerHTML += element
         
         const allDeleteItems = document.querySelectorAll(".delete")//capturamos el botón//
         

@@ -91,6 +91,8 @@ main {
    
 }
 
+
+
 .weathercontainer {
     display: flex;
     text-align: center;
@@ -102,78 +104,95 @@ main {
     padding: 20px;
     max-width: 400px;
     width: 350px;
-    height: 350px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
 }
-/*.details {
+
+.details {
+    width: 350px;
+    height: 200px;
     display: flex;
     text-align: center;
     align-items: flex-start;
     flex-direction: column;
-    color: red;
+    color: white;
     margin-left: auto;
     margin-right: auto;
+}
 
-}*/
 
 .details h2 {
     display: flex;
     justify-content: center;
+    
 }
-
-
-
 .details p {
     color: #ffe5c1
-}
+} 
+
 .temperatura {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: row;
     gap:20px;
     width:100%;
-    margin-top:20px;
+    margin-top:-60px;
+    
+}
+
+.temperatura img {
+    margin-left: -6px;
+    margin-top: 22px;
+    width: 80px;
+    height: 80px;
 }
 
 .temperatura p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
+    
+    margin-top: 40px;
+    font-size: 50px;
     color:white
 }
 
+
+
 .termometro img{
     filter: invert(1);
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
+    margin-left: -20px;
+    margin-top: 54px;s
    
 }
 
 .precipitacion {
-    display: flex;
+   
     flex-direction: column;
-    width: 300px;
-    height: 200px;
+    justify-content: flex-start;
+    
     
 }
 
 .precipitacion p {
-    font-size: 18px;
+    margin-top: -40px;
+    justify-content: flex-start;
+    font-size: 8px;
     color:#b0b0b0
 
 }
 
-/*#list {
-
+#list {
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    overflow-x: scroll;
 }
 
-
-
-
+.horas {
+    color: white;
+}
 /* footer */
 
 
