@@ -57,16 +57,65 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
    if(weatherContainer !== null) {
     weatherContainer.appendChild(divWeather)//si existe se añade como hijo//
    
+   let hour = "" 
    
   const ul = divWeather.querySelector("#list");
   const hourForecast = data.forecast.forecastday[0].hour//
   hourForecast.forEach(hour => {//se recorre/7
-    const li = document.createElement("li");//se añade cada elemento//
-    li.textContent = ` ${hour.temp_c} ${hour.condition.text}`;//se crea un elemento para cada hora con la tª//
+    const li = document.createElement("li");
+    const timePart = hour.time.split("")
+    const time = timePart[1]//coge solo la hora
+    li.innerHTML = ` ${hour.temp_c} ºC ${hour.condition.text} ${time}
+    <img src="${hour.condition.icon}">
+    
+    `;
     ul.appendChild(li);//se añada cada elemento a la ul//
-
+    
    })
   }
 
  
   }
+//const fetchingWeather = async() =>{
+  //try {
+    //const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no`)
+    
+    //if (!response.ok) {
+      //throw new Error(`Error fetching data`, console.log(error.message))
+    //}
+    //const data = await response.json()
+    
+
+    //const city = { 
+        // name :  data.location.name,
+         //country :  data.location.country,
+         //image : data.current.condition.icon,
+         //weather : data.current.condition.text,
+         //temperature : data.current.temp_c,
+         //humidity : data.current.humidity,
+         //wind : data.current.wind_kph,
+         //precipitation : data.current.precip_mm,
+         //pronostico : data.forecast.forecastday[0].hour,
+       //}
+       
+      // return city
+       
+  //} catch (error) {
+   
+  //}
+ //} 
+
+ //async function showInfo() {
+   // const data = await fetchingWeather()
+    //console.log(data);   
+  
+    //const {name, country, image, weather,temperature, humidity, wind, precipitation, pronostico} = data
+    //console.log('city',city)
+    //console.log('country',country)
+    //console.log('image',image)
+    //console.log('weather',weather)
+    //console.log('temperature',temperature)
+    //console.log('humidity',humidity)
+    //console.log('wind',wind)
+    //console.log('precipitation',precipitation)
+    //console.log('pronostico',pronostico)
