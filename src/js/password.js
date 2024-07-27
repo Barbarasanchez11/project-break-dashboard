@@ -46,17 +46,17 @@ for (let i = 0; i < longitud; i++) {//va de 0 a longitud//
    
 }
 
-return contraseña.join("");//retornamos y con join quitamos las comas
+return contraseña.join("");//retornamos y con join unimos 
 }
 
 
 //Boton generar contraseña//
 
 botoncontraseña.addEventListener("click", () => {
-   const inputValue = document.getElementById('caracteres').value
+   const inputValue = document.getElementById('caracteres')
    
-    let newpasslength = inputValue //obtenemos el valor del input//
+    let newpasslength = inputValue.value //obtenemos el valor del input//
   
-   passwordLength(newpasslength) // llamamos la la funcion passwordLength y le pasamos como argument el valor del input//
+   passwordLength(newpasslength) // llamamos la la funcion passwordLength y le pasamos como argumento el valor del input//
     
 })

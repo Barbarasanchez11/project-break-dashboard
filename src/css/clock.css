@@ -49,7 +49,10 @@ table {
 body {
     box-sizing: border-box;
     background-color: transparent;
-    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
 }
 /* header */
 .headertop{
@@ -113,7 +116,9 @@ main {
 
 .containerReloj h1 {
     color:white;
-    font-size: 36px;
+    font-size: 20px;
+    margin-bottom: -16px;
+    
 }
 
 #time {

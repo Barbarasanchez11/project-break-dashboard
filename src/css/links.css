@@ -47,7 +47,10 @@ table {
 body {
     box-sizing: border-box;
     background-color: transparent;
-    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
 }
 /* header */
 .headertop{
@@ -111,7 +114,8 @@ section{
 }
 
 .linkcontainer h2 {
-    font-size: 30px;
+    
+    font-size: 26px;
    
 
 }
@@ -126,6 +130,7 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 #nombre {
@@ -186,6 +191,7 @@ button {
     text-decoration: none;
     background-color: transparent;
     
+    
 }
 
 .ulList li {
@@ -200,6 +206,7 @@ button {
     height: 50px;
     border-radius: 5px;
     text-decoration: none;
+    overflow-y: auto;
     
     
      
