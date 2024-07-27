@@ -74,8 +74,7 @@ main {
 .seccion2 {
     display: flex;
     flex-direction: column;
-   align-items: center;
-  
+    align-items: center;
     width: 50%;
     height: 85vh;
 

@@ -39,7 +39,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
         <img src="${current.condition.icon}" class="weather-icon" alt="weather icon">
         <p class="title">${current.temp_c}</p>
       
-        <img src="../IMAGE/celsius.png" class="termometro" alt="termómetro">
+        <img src="../IMAGE/IMAGE/celsius.png" class="termometro" alt="termómetro">
         
         <div class="precipitacion">
           <p>Precipitaciones: ${current.precip_mm}%</p>
