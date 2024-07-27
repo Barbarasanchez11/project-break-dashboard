@@ -2,7 +2,7 @@ const api = "https://api.weatherapi.com/"
 const apiKey = "9d767ea520924c83ad8170615241707"
 const weatherContainer = document.getElementById("weather")
 const forecast = document.getElementById("forecast")
-
+const isMainContainer = document.getElementById("index")
 
 fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no`)//obtenemmos datos(get) desde la api de Madrid//
  .then(response => response.json())//se convierte objeto Json//
@@ -39,7 +39,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
         <img src="${current.condition.icon}" class="weather-icon" alt="weather icon">
         <p class="title">${current.temp_c}</p>
       
-        <img src="../assets/celsius.png" class="termometro" alt="termómetro">
+        <img src= "${isMainContainer ? "./src/assets/celsius.png" : "../assets/celsius.png"}" class="termometro" alt="termómetro">
         
         <div class="precipitacion">
           <p>Precipitaciones: ${current.precip_mm}%</p>
