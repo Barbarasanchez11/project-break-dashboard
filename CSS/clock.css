@@ -48,13 +48,13 @@ table {
 
 body {
     box-sizing: border-box;
-    background-color: blue;
+    background-color: transparent;
     
 }
 /* header */
 .headertop{
     display: flex;  
-    background-color: aqua;
+    background-color: transparent;
     height: 50px;
     align-items: center;
     color: white;

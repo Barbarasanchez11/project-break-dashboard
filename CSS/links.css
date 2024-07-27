@@ -46,13 +46,13 @@ table {
 
 body {
     box-sizing: border-box;
-    background-color: blue;
+    background-color: transparent;
     
 }
 /* header */
 .headertop{
     display: flex;  
-    background-color: aqua;
+    background-color: transparent;
     height: 50px;
     align-items: center;
     color: white;
@@ -93,6 +93,7 @@ section{
     align-items: center;
     justify-content: flex-start;
     
+    
 }
 
 .linkcontainer {
@@ -105,6 +106,7 @@ section{
     padding: 10px;
     gap: 10px;
     color: white;
+    
 
 }
 
@@ -182,7 +184,8 @@ button {
     padding: 20px;
     gap:20px;
     text-decoration: none;
-    background-color: blueviolet;
+    background-color: transparent;
+    
 }
 
 .ulList li {
@@ -197,6 +200,7 @@ button {
     height: 50px;
     border-radius: 5px;
     text-decoration: none;
+    
     
      
 }
