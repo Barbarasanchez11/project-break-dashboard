@@ -59,7 +59,8 @@ main {
     flex-wrap: nowrap;
     justify-content: space-around;
     height: 100vh;
-    background-color: aqua;
+
+   
 }
 
 .seccion1 {
@@ -444,7 +445,8 @@ button {
         gap: 10px;
         padding: 15px;
         width: 50%;
-        position: fixed;
+        height: 15vh;
+       position: fixed;
         bottom: 0;
         right: 0;
         margin-bottom: 30px;
