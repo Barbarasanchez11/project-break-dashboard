@@ -416,9 +416,9 @@ button {
     align-items: center;
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     width: 150px;
-    height: 30px;
+    height: 20px;
     margin-top: 16px;
     cursor: pointer;
 
@@ -426,7 +426,7 @@ button {
 #contraseñanueva {
     display: flex;
     color: #ffe5c1;
-    font-size: 20px;
+    font-size: 12px;
     margin-top: 16px;
 }
 #frase{
