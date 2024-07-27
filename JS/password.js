@@ -37,10 +37,10 @@ function crearContraseña (longitud){
 for (let i = 0; i < longitud; i++) {//va de 0 a longitud//
     
     let all = [...mayuscula  ,...minuscula ,...numeros , ...simbolos] 
-   console.log(all)
+   
     
     i < 4 ? contraseña.push(caracteres[i][Math.floor(Math.random() * caracteres[i].length)]) : contraseña.push(all[Math.floor(Math.random() * all.length)]);
-    //4 para que haya uno de cada tipo, math.random agraga un caracter al azar de cada tipo//
+    //si i <4,da un nº aleatorio entre 0 y caracteres[i] y se añade al array,si 1 >4 lo coge de all y se agrega al array
     
     
    

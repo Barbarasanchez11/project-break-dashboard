@@ -75,6 +75,7 @@ main {
     display: flex;
     flex-direction: column;
    align-items: center;
+  
     width: 50%;
     height: 85vh;
 
@@ -360,9 +361,6 @@ button {
     font-size: 28px;
 }
 
-.password-container a {
-
-}
 
 .containerpassword{
     margin: 0 auto;

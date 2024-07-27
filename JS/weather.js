@@ -33,7 +33,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
     divWeather.innerHTML = ` 
       <div class="details">
         <h2>${location.name}, ${location.country}</h2>
-        <p> ${current.condition.text}</p>
+        <p class="sunny"> ${current.condition.text}</p>
       </div>
       <div class="temperatura">
         <img src="${current.condition.icon}" class="weather-icon" alt="weather icon">
