@@ -31,7 +31,7 @@ function crearContraseña (longitud){
     let numeros = "0123456789"
     let simbolos = "@#$%^&*()-_=+"
     let caracteres = [[...mayuscula] , [...minuscula] ,[...numeros] , [...simbolos]] // lo vamos a utilizar solo para seleccionar uno de cada //
-  console.log(caracteres)
+  
     let contraseña = []//arr vacio para generar contraseña//
 
 for (let i = 0; i < longitud; i++) {//va de 0 a longitud//

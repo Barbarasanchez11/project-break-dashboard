@@ -22,8 +22,7 @@ const interval = setInterval (() => {//se ejecuta cada segundo(1000)
    
      //extraemos dia,mes y año//
     
-    const day = local.getDate();
-    
+    const day = local.getDate();    
     const month = local.getMonth();
     const months= ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
     const currentMonth = months[month]
@@ -56,7 +55,7 @@ function mostrarFrase() {//dará una frase según la hora//
         frase ="Buenas tardes, el último empujón"
     }else if (hour  >= 18 && hour  < 20) {
         frase ="Esto ya son horas extras, ... piensa en parar pronto"
-    }else {//si no son niguna de las horas de los if o else if, nos dará esta frase//
+    }else {//si no son ninguna de las horas de los if o else if, nos dará esta frase//
         frase = "Buenas noches, es hora de pensar en parar y descansar"
     }
 
