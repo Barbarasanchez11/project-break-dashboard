@@ -16,7 +16,6 @@ const fondo = () => {
     const aleatorio = Math.floor(Math.random() * fotos.length);
     const cambio = fotos[aleatorio];
     document.body.style.backgroundImage = `url("${cambio}")`;
-    console.log(cambio)
 }
 
 

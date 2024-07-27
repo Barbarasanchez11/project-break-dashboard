@@ -12,7 +12,7 @@ function passwordLength(longitud = 12 ) {//si pones nº < 12 no te da contraseñ
        alert ("La contraseña debe tener mínimo 12 caracteres")
        return//aquí e para, si no se ejecuta uno
     }else if (longitud > 50){
-        alert( "La contraseña no puede tener más de 50 caracteres")
+        alert( "La contraseña no puede tener más de 50 caracteres") 
        return
     }
     let contraseña = crearContraseña(longitud) //invocamos la funcion crearContraseña //
@@ -53,7 +53,10 @@ return contraseña.join("");//retornamos y con join quitamos las comas
 //Boton generar contraseña//
 
 botoncontraseña.addEventListener("click", () => {
-   let newpasslength = caracteres.value //obtenemos el valor del input//
+   const inputValue = document.getElementById('caracteres').value
+   
+    let newpasslength = inputValue //obtenemos el valor del input//
+  
    passwordLength(newpasslength) // llamamos la la funcion passwordLength y le pasamos como argument el valor del input//
     
 })
