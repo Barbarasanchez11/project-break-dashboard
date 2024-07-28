@@ -312,6 +312,9 @@ button {
     justify-content: center;
     
 }
+.sunny {
+    color:#ffe5c1
+}
 
 
 
@@ -349,6 +352,9 @@ button {
    margin-left: 20px;
 }
 
+.grados{
+   color: #ffe5c1
+}
 
 
 /*contraseña index*/
@@ -425,7 +431,7 @@ button {
 }
 #contraseñanueva {
     display: flex;
-    color:white;
+    color:#ffe5c1;
     font-size: 20px;
     margin-top: 16px;
 }
