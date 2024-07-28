@@ -290,6 +290,7 @@ button {
     border-radius: 15px;
     background-color: #33333393;
     padding: 20px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -363,6 +364,7 @@ button {
 
     display: flex;
     flex-direction: column;
+  
 }
 .password-container h2 {
     color: white;
@@ -465,3 +467,5 @@ button {
         height: 30px
         
     }
+
+   
