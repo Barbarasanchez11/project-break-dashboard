@@ -21,6 +21,9 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
         
             
  })   
+ .catch(error => {
+  console.error("Error", error)
+ })
 
  function showInfo(data) {
   
