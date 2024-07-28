@@ -9,8 +9,8 @@ const botoncontraseña = document.getElementById("botoncontraseña")
 function passwordLength(longitud = 12 ) {//si pones nº < 12 no te da contraseña//
     
     if(longitud < 12) {
-       alert ("La contraseña debe tener mínimo 12 caracteres")
-       return//aquí e para, si no se ejecuta uno
+       alert ("La contraseña debe tener mínimo 12 caracteres")//aquí se para//
+       return
     }else if (longitud > 50){
         alert( "La contraseña no puede tener más de 50 caracteres") 
        return
