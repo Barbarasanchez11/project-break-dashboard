@@ -88,11 +88,11 @@ body {
 
 /* main */
 main {
-    height: calc(100vh - 50px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
+    align-items: center;
 }
 
 
@@ -106,17 +106,16 @@ main {
     border-radius: 15px;
     background-color: #33333393;
     padding: 20px;
+    width: 100%;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 .details {
     max-width: 350px;
     width: 100%;
-    /* height: 200px; */
     display: flex;
-    /* text-align: center; */
     align-items: flex-start;
     flex-direction: column;
     color: white;
