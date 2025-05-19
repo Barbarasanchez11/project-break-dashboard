@@ -18,6 +18,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
         wind = data.current.wind_kph
         precipitation = data.current.precip_mm
         pronostico = data.forecast.forecastday[0].hour
+        console.log(pronostico)
         
             
  })   
@@ -67,7 +68,7 @@ fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Madrid&aqi=no
   hourForecast.forEach(hour => {//se recorre//
     const li = document.createElement("li");
     const time = hour.time.split(" ")[1]//separamos hora de fecha, se accede al 1 que es la hora//
-    
+   
     li.innerHTML = `
     
       <div class="horas"> ${time}</div>

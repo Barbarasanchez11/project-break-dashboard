@@ -96,7 +96,8 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
+    width: 100%;
+    padding: 0 20px;
 }
 
 .containerReloj {
@@ -109,7 +110,8 @@ main {
     padding: 20px;
     background-color: #33333393;
     border-radius: 10px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -179,4 +181,10 @@ footer {
 .nav-bar a:hover img {
     transform: scale(1.2);
     
+}
+
+@media (max-width: 768px) {
+    .clockcontainer {
+        width: 100%;
+    }
 }
