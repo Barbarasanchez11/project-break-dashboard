@@ -84,11 +84,11 @@ body {
 
 /* main */
 main {
-    height: calc(100vh - 50px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
+    align-items: center;
 }
 
 .clockcontainer {
@@ -98,6 +98,7 @@ main {
     align-items: center;
     width: 100%;
     padding: 0 20px;
+    margin-top: 0;
 }
 
 .containerReloj {
@@ -106,7 +107,6 @@ main {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 200px;
     padding: 20px;
     background-color: #33333393;
     border-radius: 10px;
